@@ -10,11 +10,11 @@ public class Produto {
 
 
 
-    Produto (int codigo){
+    public Produto (int codigo){
         this.codigo = codigo;
     }
 
-    Produto(int codigo, String nome){
+    public Produto(int codigo, String nome){
         this.codigo = codigo;
         this.nome = nome; 
     }
@@ -25,7 +25,7 @@ public class Produto {
         this. quant = quant;
     }
 
-    Produto(int codigo, String nome, int quant, String tipo, double preço){
+    public Produto(int codigo, String nome, int quant, String tipo, double preço){
         this.codigo = codigo;
         this.nome = nome ;
         this.quant = quant;
@@ -33,7 +33,7 @@ public class Produto {
         this.preço = preço; 
     }
 
-    void vender(int Quant){
+    public void vender(int Quant){
         double valor;
         if(Quant > quant){
             System.out.println("Não possui quantidade suficiente no estoque");
@@ -45,12 +45,12 @@ public class Produto {
         }
     }
 
-    void comprar( int Quant, double newvalor){
+    public void comprar( int Quant, double newvalor){
         quant += Quant;
         preço = newvalor;
     }
 
-    void comprar (int Quant){
+    public void comprar (int Quant){
         quant += Quant;
     }
 
@@ -62,14 +62,14 @@ public class Produto {
         "Quantidade em estoque: "+quant+"\n";
     }
 
-    void inserir(String newnome, int Quant, String newtype, double newpreço){
+    public void inserir(String newnome, int Quant, String newtype, double newpreço){
         nome = newnome;
         quant = Quant;
         tipo= newtype;
         preço = newpreço;
     }
 
-    void igual(Produto p){
+    public void igual(Produto p){
         if(nome.equals(p.nome)){
             System.out.println("true");
         }

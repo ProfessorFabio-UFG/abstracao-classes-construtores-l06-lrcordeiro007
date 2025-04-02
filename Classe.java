@@ -1,4 +1,5 @@
 package abstracao;
+
 import java.text.DecimalFormat;
 
 public class Classe {
